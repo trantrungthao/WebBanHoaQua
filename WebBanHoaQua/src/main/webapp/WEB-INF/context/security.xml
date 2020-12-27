@@ -11,7 +11,7 @@
     
     	<intercept-url pattern="/admin/trangchu" access="hasAnyRole('ADMIN')" />
     	
-    	<access-denied-handler error-page="/accessDenied" />
+    	<access-denied-handler error-page="/dangnhapSecurity" />
         <form-login  login-page="/dangnhap"
                      username-parameter="j_username"
                      password-parameter="j_password"
@@ -29,6 +29,6 @@
     </authentication-manager>
     
     <beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
-    <beans:bean id="customUserDetailsService" class="com.project.services.impl.CustomUserDetailsService" />
-    <beans:bean id="customSuccessHandler" class="com.project.security.CustomSuccessHandler" />
+    <beans:bean id="customUserDetailsService" class="com.project.services.impl.TaiKhoanSecurityImpl" />
+    <beans:bean id="customSuccessHandler" class="com.project.security.CustomSecurityHandler" />
 </beans:beans>

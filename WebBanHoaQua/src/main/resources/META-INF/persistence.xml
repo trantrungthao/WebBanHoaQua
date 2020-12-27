@@ -8,5 +8,7 @@
 		<class>com.project.model.Quyen</class>
 		<class>com.project.model.HoaDon</class>
 		<class>com.project.model.ThongtinTaikhoan</class>
+		<class>com.project.model.SanPham</class>
+		<class>com.project.model.LienHe</class>
 	</persistence-unit>
 </persistence>

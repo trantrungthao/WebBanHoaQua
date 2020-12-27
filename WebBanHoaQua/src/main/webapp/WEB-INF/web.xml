@@ -13,7 +13,7 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
             /WEB-INF/context/applicationContext.xml
-            <!--  /WEB-INF/context/security.xml-->
+            /WEB-INF/context/security.xml
         </param-value>
 	</context-param>
 
@@ -31,7 +31,7 @@
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- Spring Security -->
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>
@@ -43,7 +43,7 @@
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>ERROR</dispatcher>
 	</filter-mapping>
-	
+
 	<!-- sitemesh filter -->
 	<filter>
 		<filter-name>sitemesh_web</filter-name>
@@ -68,10 +68,15 @@
 			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
 		</user-data-constraint>
 	</security-constraint>
-	
+
 	<!-- Welcome -->
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-
+	
+	<!--404 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404.jsp</location>
+	</error-page>
 </web-app>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2147d154-ecd1-483e-9e4e-d317c6c4db57" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1e1dtEXlibOklgpqnQ7ScQJEE9t" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Download\CNPM\ogani\ogani\css" />
+      <recent name="D:\Download\CNPM\ogani\ogani" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Download\CNPM\ogani\ogani\Source" />
+      <recent name="D:\Download\CNPM\ogani\ogani\css\csslogin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2147d154-ecd1-483e-9e4e-d317c6c4db57" name="Default Changelist" comment="" />
+      <created>1593493245854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593493245854</updated>
+      <workItem from="1593493247423" duration="1224000" />
+      <workItem from="1593496946569" duration="326000" />
+      <workItem from="1593662949660" duration="23000" />
+      <workItem from="1594629140421" duration="5470000" />
+      <workItem from="1594652280636" duration="5312000" />
+      <workItem from="1594878028818" duration="2980000" />
+      <workItem from="1595076698663" duration="86000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

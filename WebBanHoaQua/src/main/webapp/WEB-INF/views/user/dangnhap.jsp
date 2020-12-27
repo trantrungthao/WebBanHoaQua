@@ -1,30 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ include file="/common/taglib.jsp" %>
+<c:url value="template/user" var="url"></c:url>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Đăng nhập</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="vendor/bootstrap/css/bootstrap.min.css">
+	href="<c:url value='${url}/css/bootstrap.min.css'/>">
+<!--===============================================================================================-->
+ <link rel="stylesheet" type="text/css"
+	href="<c:url value='${url}/css/font-awesome.min.css'/>">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="<c:url value='${url}/vendor/animate/animate.css'/>">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="khachhang/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	href="<c:url value='${url}/vendor/css-hamburgers/hamburgers.min.css'/>">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css"
-	href="vendor/css-hamburgers/hamburgers.min.css">
+	href="<c:url value='${url}/vendor/select2/select2.min.css'/>">
 <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css"
-	href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="khachhang/css/util.css">
-<link rel="stylesheet" type="text/css" href="khachhang/css/main.css">
+ <link rel="stylesheet" type="text/css" href="<c:url value='${url}/css/util.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='${url}/css/main.css'/>">
 <!--===============================================================================================-->
 <!-- API captcha google -->
 <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -38,24 +37,32 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="khachhang\img\ts\logodn.png" alt="IMG">
+					<img src="${url}\img\logo.png" alt="IMG">
 				</div>
-
-				<form
-					action="<%=request.getContextPath()%>/Dangnhap?action=dangnhap"
-					method="POST" class="login100-form validate-form">
+	
+				<form action="j_spring_security_check" id="formLogin" method="post" class="login100-form validate-form">
 					<span class="login100-form-title"> ĐĂNG NHẬP </span>
 					<!--Hiện thông báo đăng nhập không thành công-->
-					<a>${error}</a>
+					<c:if test="${param.incorrectAccount != null}">
+					<div class="alert alert-danger">	
+							Tài khoản hoặc Mật khẩu không đúng!
+					</div>
+				</c:if>
+				<c:if test="${param.accessDenied != null}">
+					<div class="alert alert-danger">	
+							Phải đăng nhập
+					</div>
+				</c:if>
+				
 					<div class="wrap-input100 validate-input">
 						<!-- Kiểm tra trường dữ liệu không để trống và nhận vào userName-->
-						<input class="input100" type="text" name="tendangnhap"
-							placeholder="Tên đăng nhập" pattern="^([a-z0-9]){1,12}$" title="VD: trungthao, thaohien" required />
+						<input class="input100" type="text" id="username" name="j_username"
+							placeholder="Tên đăng nhập" pattern="^([a-z0-9]){1,12}$" title="VD: trungthao, hoanganh" required />
 					</div>
 
 					<div class="wrap-input100 validate-input">
 						<!--Kiểm tra password đủ 6 kí tự trở lên và nhận vào password-->
-						<input class="input100" type="password" name="matkhau"
+						<input class="input100" type="password" id="password" name="j_password"
 							placeholder="Mật khẩu" pattern=".{6,}" title="6 kí tự trở lên"
 							required />
 		
@@ -91,27 +98,24 @@
 			</div>
 		</div>
 	</div>
-	<div id="fb-root"></div>
 
+	<%-- <script></script>
 
-	<script></script>
-	<script></script>
-	<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="<c:url value='${url}/vendor/jquery/jquery-3.2.1.min.js'/>"></script>
+
+	<script src="<c:url value='${url}/vendor/bootstrap/js/popper.js'/>"></script>
+	<script src="<c:url value='${url}/vendor/bootstrap/js/bootstrap.min.js'/>"></script>
+
+	<script src="<c:url value='${url}/vendor/select2/select2.min.js'/>"></script>
+
+	<script src="<c:url value='${url}/vendor/tilt/tilt.jquery.min.js'/>"></script>
 	<script>
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
 	</script>
-	<!--===============================================================================================-->
-	<script src="khachhang/js/main.js"></script>
+
+	<script src="<c:url value='${url}/js/main.js'/>"></script> --%>
 
 </body>
 </html>

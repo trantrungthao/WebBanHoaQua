@@ -14,11 +14,11 @@ public class TrangChuController {
 	}
 	@RequestMapping(value = "/dangnhap", method = RequestMethod.GET)
 	public ModelAndView login() {
-		ModelAndView mav = new ModelAndView("login");
+		ModelAndView mav = new ModelAndView("user/dangnhap");
 		return mav;
 	}
-	@RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
+	@RequestMapping(value = "/dangnhapSecurity", method = RequestMethod.GET)
 	public ModelAndView accessDenied() {
-		return new ModelAndView("redirect:/dang-nhap?accessDenied");
+		return new ModelAndView("redirect:/dangnhap");
 	}
 }

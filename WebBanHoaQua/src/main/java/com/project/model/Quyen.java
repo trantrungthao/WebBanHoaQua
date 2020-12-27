@@ -10,48 +10,45 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "role")
+@Table(name = "quyen")
 public class Quyen {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 	
-    private String name;
+    private String tenquyen;
 
-    @ManyToMany(mappedBy = "roles")
-    private Set<TaiKhoan> users;
+    @ManyToMany(mappedBy = "quyens")
+    private Set<TaiKhoan> taikhoans;
 
 	public Quyen() {
+		
 	}
-	
-	public Quyen(Long id, String name, Set<TaiKhoan> users) {
+
+	public Quyen(Long id, String tenquyen, Set<TaiKhoan> taikhoans) {
 		this.id = id;
-		this.name = name;
-		this.users = users;
+		this.tenquyen = tenquyen;
+		this.taikhoans = taikhoans;
+	}
+
+	public String getTenquyen() {
+		return tenquyen;
+	}
+
+	public void setTenquyen(String tenquyen) {
+		this.tenquyen = tenquyen;
+	}
+
+	public Set<TaiKhoan> getTaikhoans() {
+		return taikhoans;
+	}
+
+	public void setTaikhoans(Set<TaiKhoan> taikhoans) {
+		this.taikhoans = taikhoans;
 	}
 
 	public Long getId() {
 		return id;
 	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Set<TaiKhoan> getUsers() {
-		return users;
-	}
-
-	public void setUsers(Set<TaiKhoan> users) {
-		this.users = users;
-	}
-
+	
 }

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <decorators defaultdir="/decorators">
 
-	
-    <decorator name="trangchu" page="trangchu.jsp">
-       <pattern>/*</pattern>
-    </decorator>
-    
-    <decorator name="admin" page="admin.jsp">
-       <pattern>/admin*</pattern>
-    </decorator>
-    
-    <decorator name="dangnhap" page="dangnhap.jsp">
-        <pattern>/dangnhap</pattern>
-    </decorator>
-    
+
+	<decorator name="trangchu" page="trangchu.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+
+	<decorator name="admin" page="admin.jsp">
+		<pattern>/admin*</pattern>
+	</decorator>
+
+ 	<!--  <decorator name="dangnhap" page="dangnhap.jsp">
+		<pattern>/dangnhap</pattern>
+	</decorator> -->
+
 </decorators>

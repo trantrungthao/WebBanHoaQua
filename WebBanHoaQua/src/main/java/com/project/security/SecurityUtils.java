@@ -6,7 +6,7 @@ import java.util.Set;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import com.project.services.impl.CustomUserDetailsService.MyUser;
+import com.project.services.impl.TaiKhoanSecurityImpl.MyUser;
 
 
 public class SecurityUtils {

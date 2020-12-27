@@ -17,7 +17,7 @@ public class ThongtinTaikhoan {
 	
 	private String hoten;
 	
-	private String anh;
+	private String hinhanh;
 	
 	private String email;
 	
@@ -36,10 +36,9 @@ public class ThongtinTaikhoan {
 
 	public ThongtinTaikhoan(long id, String hoten, String anh, String email, String sdt, String diachi, Date ngaysinh,
 			String gioitinh) {
-		super();
 		this.id = id;
 		this.hoten = hoten;
-		this.anh = anh;
+		this.hinhanh = anh;
 		this.email = email;
 		this.sdt = sdt;
 		this.diachi = diachi;
@@ -51,10 +50,6 @@ public class ThongtinTaikhoan {
 		return id;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
 	public String getHoten() {
 		return hoten;
 	}
@@ -64,11 +59,11 @@ public class ThongtinTaikhoan {
 	}
 
 	public String getAnh() {
-		return anh;
+		return hinhanh;
 	}
 
 	public void setAnh(String anh) {
-		this.anh = anh;
+		this.hinhanh = anh;
 	}
 
 	public String getEmail() {
