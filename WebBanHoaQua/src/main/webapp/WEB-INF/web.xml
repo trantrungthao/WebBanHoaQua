@@ -59,7 +59,7 @@
 	</filter-mapping>
 
 	<!-- Https -->
-	<security-constraint>
+	 <security-constraint>
 		<web-resource-collection>
 			<web-resource-name>security_web</web-resource-name>
 			<url-pattern>/*</url-pattern>
@@ -67,7 +67,7 @@
 		<user-data-constraint>
 			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
 		</user-data-constraint>
-	</security-constraint>
+	</security-constraint> 
 
 	<!-- Welcome -->
 	<welcome-file-list>

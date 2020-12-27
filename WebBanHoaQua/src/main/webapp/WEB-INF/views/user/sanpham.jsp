@@ -4,86 +4,44 @@
 <c:url value="template/user" var="url"></c:url>
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
-    <title>Website Bán Hoa Quả </title>
+    <title>Sản Phẩm</title>
 </head>
+
 <body>
-<!-- Hero Section Begin -->
-    <section class="hero">
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="${url}/img/breadcrumb.jpg">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="hero__search">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Sản phẩm</h2>
+                        <div class="breadcrumb__option">
+                            <a href="trangchu">Trang Chủ</a>
+                            <span>Sản Phẩm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+    <div>
+    <br>
+    <br>
+    </div>
+    <!-- Hero Section Begin -->
+    <section class="hero">
                         <div class="hero__search__form">
                             <form action="#">
                                 <input type="text" placeholder="cà chua">
                                 <button type="submit" class="site-btn">Tìm kiếm</button>
                             </form>
-                        </div>
-                        <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <div class="hero__search__phone__text">
-                                <h5>+84 971999999</h5>
-                                <span>Hỗ trợ 24/7</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero__item set-bg" data-setbg="${url}/img/hero/banner.jpg">
-                        <div class="hero__text">
-                            <span>Khuyến mãi</span>
-                            <h2>Giảm đến <br />50% Các Loại Quả Trong Mùa Hè</h2>
-                            <p>FreeShip trong thành phố</p>
-                            <a href="#" class="primary-btn">Mua Ngay</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
-    <!-- Categories Section Begin -->
-    <section class="categories">
-        <div class="container">    
-            <div class="row">
-            <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Sản Phẩm Nổi Bật</h2>
-                    </div>
-                </div>
-                <div class="categories__slider owl-carousel">
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="${url}/img/categories/cat-1.jpg">
-                            <h5><a href="#">Fresh Fruit</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="${url}/img/categories/cat-2.jpg">
-                            <h5><a href="#">Dried Fruit</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="${url}/img/categories/cat-3.jpg">
-                            <h5><a href="#">Vegetables</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="${url}/img/categories/cat-4.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="${url}/img/categories/cat-5.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Categories Section End -->
-
+    
     <!-- Featured Section Begin -->
     <section class="featured spad">
         <div class="container">
@@ -91,15 +49,6 @@
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>Tất Cả Sản Phẩm</h2>
-                    </div>
-                    <div class="featured__controls">
-                        <ul>
-                            <li class="active" data-filter="*">All</li>
-                            <li data-filter=".oranges">Oranges</li>
-                            <li data-filter=".fresh-meat">Fresh Meat</li>
-                            <li data-filter=".vegetables">Vegetables</li>
-                            <li data-filter=".fastfood">Fastfood</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -229,5 +178,4 @@
     </section>
     <!-- Featured Section End -->
 </body>
-
 </html>

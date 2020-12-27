@@ -1,27 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:url value="template/user" var="url"></c:url>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Đăng ký</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="khachhang/images/icons/favicon.ico"/>
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="khachhang/vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="khachhang/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="khachhang/vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="khachhang/vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="khachhang/vendor/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="khachhang/css/util.css">
-    <link rel="stylesheet" type="text/css" href="khachhang/css/main.css">
-    <!--===============================================================================================-->
 </head>
 <body>
 
@@ -29,10 +14,10 @@
     <div class="container-login100">
         <div class="wrap-login100">
             <div class="login100-pic js-tilt" data-tilt>
-                <img src="khachhang\img\ts\logodk.png" alt="IMG">
+                <img src="${url}/img/product/product-12.jpg" alt="IMG">
             </div>
             
-          <form action="<%=request.getContextPath()%>/dangky?action=dangky" method="POST" class="login100-form validate-form"> 
+          <form action="#" method="POST" class="login100-form validate-form"> 
          
 					<span class="login100-form-title">
 						ĐĂNG KÝ
@@ -91,28 +76,10 @@
                 </div>
                 <span>${maxn}</span>
                 <a>${error}</a>
-                <!--Đăng ký: 7. Khách hàng chọn đăng ký
-                			   8. Hệ thống kiểm tra dữ liệu-->
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn">
                         Đăng ký
                     </button>
-                </div>
-
-<!--                <div class="text-center p-t-12">-->
-<!--						<span class="txt1">-->
-<!--							Quên-->
-<!--						</span>-->
-<!--                    <a class="txt2" href="#">-->
-<!--                        Tên đăng nhập / Mật khẩu?-->
-<!--                    </a>-->
-<!--                </div>-->
-
-                <div class="text-center p-t-120">
-<!--                    <a class="txt2" href="#">-->
-<!--                        Đăng ký tài khoản-->
-<!--                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>-->
-<!--                    </a>-->
                 </div>
             </form>
         </div>

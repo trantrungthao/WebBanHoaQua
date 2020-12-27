@@ -21,32 +21,24 @@
     <link rel="stylesheet" href="<c:url value='${url}/css/owl.carousel.min.css'/>" type="text/css">
     <link rel="stylesheet" href="<c:url value='${url}/css/slicknav.min.css'/>" type="text/css">
     <link rel="stylesheet" href="<c:url value='${url}/css/style.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='${url}/css/util.css'/>" type="text/css">
+	<link rel="stylesheet" href="<c:url value='${url}/css/main.css'/>" type="text/css">
 </head>
 
 <body>
    <!-- header start -->
-	<header>
 		<div>
-			<!-- header -->
 			<jsp:include page="/common/user/header.jsp" />
-			<!-- header -->
 		</div>
-	</header>
 	<!-- header end -->
 
    <dec:body/>
    
-    <!-- Footer Section Begin -->
-    <footer class="footer spad">
-
+    <!-- Footer Begin -->
 		<div>
-			<!-- footer -->
 			<jsp:include page="/common/user/footer.jsp" />
-			<!-- footer -->
 		</div>
-
-    </footer>
-    <!-- Footer Section End -->
+    <!-- Footer End -->
 
     <!-- Js Plugins -->
     <script src="<c:url value='${url}/js/jquery-3.3.1.min.js'/>"></script>
