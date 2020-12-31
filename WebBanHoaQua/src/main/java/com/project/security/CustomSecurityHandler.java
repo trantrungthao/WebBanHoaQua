@@ -1,6 +1,7 @@
 package com.project.security;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
@@ -38,7 +39,7 @@ public class CustomSecurityHandler extends SimpleUrlAuthenticationSuccessHandler
 	
 	private String determineTargetUrl(Authentication authentication) {
 		String url = "";
-		Set<String> roles = SecurityUtils.getAuthorities();
+		List<String> roles = SecurityUtils.getAuthorities();
 		if (isAdmin(roles)) {
 			url = "/admin/trangchu";
 		} else if (isUser(roles)) {
@@ -47,14 +48,14 @@ public class CustomSecurityHandler extends SimpleUrlAuthenticationSuccessHandler
 		return url;
 	}
 	
-	private boolean isAdmin(Set<String> roles) {
+	private boolean isAdmin(List<String> roles) {
 		if (roles.contains("ADMIN")) {
 			return true;
 		}
 		return false;
 	}
 	
-	private boolean isUser(Set<String> roles) {
+	private boolean isUser(List<String> roles) {
 		if (roles.contains("USER")) {
 			return true;
 		}

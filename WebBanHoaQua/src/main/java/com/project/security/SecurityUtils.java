@@ -1,12 +1,15 @@
 package com.project.security;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import com.project.services.impl.TaiKhoanSecurityImpl.MyUser;
+import com.project.model.MyUser;
+
 
 
 public class SecurityUtils {
@@ -17,9 +20,9 @@ public class SecurityUtils {
     }
 	
 	@SuppressWarnings("unchecked")
-	public static Set<String> getAuthorities() {
-		Set<String> results = new HashSet<>();
-		Set<GrantedAuthority> authorities = (Set<GrantedAuthority>)(SecurityContextHolder.getContext().getAuthentication().getAuthorities());
+	public static List<String> getAuthorities() {
+		List<String> results = new ArrayList<String>();
+		List<GrantedAuthority> authorities = (List<GrantedAuthority>)(SecurityContextHolder.getContext().getAuthentication().getAuthorities());
         for (GrantedAuthority authority : authorities) {
             results.add(authority.getAuthority());
         }

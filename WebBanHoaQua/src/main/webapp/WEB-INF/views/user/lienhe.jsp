@@ -95,7 +95,7 @@
 
     <!-- Map Begin -->
     <div class="map">
-       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15672.728116357672!2d106.78635968465579!3d10.87375570000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276398969f7b%3A0x9672b7efd0893fc4!2zxJDhuqFpIEjhu41jIE7DtG5nIEzDom0!5e0!3m2!1svi!2s!4v1609066580234!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15672.728116357672!2d106.78635968465579!3d10.87375570000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276398969f7b%3A0x9672b7efd0893fc4!2zxJDhuqFpIEjhu41jIE7DtG5nIEzDom0!5e0!3m2!1svi!2s!4v1609066580234!5m2!1svi!2s" width="600" height="450" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
         <div class="map-inside">
             <i class="icon_pin"></i>
             <div class="inside-widget">

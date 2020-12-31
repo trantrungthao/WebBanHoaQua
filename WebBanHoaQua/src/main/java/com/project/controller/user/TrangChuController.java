@@ -12,16 +12,7 @@ public class TrangChuController {
 		ModelAndView mav = new ModelAndView("user/trangchu");
 		return mav;
 	}
-	@RequestMapping(value = "/dangnhap", method = RequestMethod.GET)
-	public ModelAndView login() {
-		ModelAndView mav = new ModelAndView("user/dangnhap");
-		return mav;
-	}
-	@RequestMapping(value = "/dangky", method = RequestMethod.GET)
-	public ModelAndView register() {
-		ModelAndView mav = new ModelAndView("user/dangky");
-		return mav;
-	}
+	
 	@RequestMapping(value = "/sanpham", method = RequestMethod.GET)
 	public ModelAndView sanpham() {
 		ModelAndView mav = new ModelAndView("user/sanpham");
@@ -46,9 +37,5 @@ public class TrangChuController {
 	public ModelAndView lienhe() {
 		ModelAndView mav = new ModelAndView("user/lienhe");
 		return mav;
-	}
-	@RequestMapping(value = "/dangnhapSecurity", method = RequestMethod.GET)
-	public ModelAndView accessDenied() {
-		return new ModelAndView("redirect:/dangnhap");
 	}
 }

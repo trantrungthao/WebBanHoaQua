@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.project.model.ThongtinTaikhoan;
 
 public interface ThongtinTaiKhoanRepository extends JpaRepository<ThongtinTaikhoan, Long>{
-	ThongtinTaikhoan findOneByHoten(String hoten);
+	ThongtinTaikhoan findOne(Long id);
+	
 }

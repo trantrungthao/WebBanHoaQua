@@ -9,7 +9,8 @@
             
     <http auto-config="false" use-expressions="true" disable-url-rewriting="true">
     
-    	<intercept-url pattern="/admin/trangchu" access="hasAnyRole('ADMIN')" />
+    	<intercept-url pattern="/admin/*" access="hasAnyRole('ADMIN')" />
+    	<intercept-url pattern="/user/*" access="hasRole('USER')" />
     	
     	<access-denied-handler error-page="/dangnhapSecurity" />
         <form-login  login-page="/dangnhap"
@@ -19,7 +20,10 @@
                      authentication-success-handler-ref="customSuccessHandler"
                      authentication-failure-url="/dangnhap?incorrectAccount"/>
         <session-management invalid-session-url="/dangnhap?sessionTimeout"/>
-        <logout delete-cookies="JSESSIONID"/>
+        <logout 
+		   logout-url="/dangxuat" 
+		   logout-success-url="/trangchu"/>
+     <!--    <logout delete-cookies="JSESSIONID"/> -->
     </http>
     
     <authentication-manager >

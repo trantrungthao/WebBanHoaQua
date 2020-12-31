@@ -34,17 +34,20 @@ public class ThongtinTaikhoan {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ThongtinTaikhoan(long id, String hoten, String anh, String email, String sdt, String diachi, Date ngaysinh,
-			String gioitinh) {
+	public ThongtinTaikhoan(long id, String hoten, String hinhanh, String email, String sdt,
+			String diachi, Date ngaysinh, String gioitinh) {
+		super();
 		this.id = id;
 		this.hoten = hoten;
-		this.hinhanh = anh;
+		this.hinhanh = hinhanh;
 		this.email = email;
 		this.sdt = sdt;
 		this.diachi = diachi;
 		this.ngaysinh = ngaysinh;
 		this.gioitinh = gioitinh;
 	}
+
+
 
 	public long getId() {
 		return id;
@@ -104,6 +107,18 @@ public class ThongtinTaikhoan {
 
 	public void setGioitinh(String gioitinh) {
 		this.gioitinh = gioitinh;
+	}
+
+	public String getHinhanh() {
+		return hinhanh;
+	}
+
+	public void setHinhanh(String hinhanh) {
+		this.hinhanh = hinhanh;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 	
 }
