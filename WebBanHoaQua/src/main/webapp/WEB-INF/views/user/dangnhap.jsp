@@ -66,7 +66,7 @@
 							href="https://www.facebook.com/dialog/oauth?client_id=736929813734347&redirect_uri=https://localhost:8443/WebBanTraSua/facebook">/Facebook+</a>
 					</div>
 					<div class="text-center p-t-100">
-						<a class="txt2" href="dangky"> Đăng kí tài khoản <i
+						<a class="txt2" href="dangky/"> Đăng kí tài khoản <i
 							class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>

@@ -38,6 +38,8 @@
                             <!-- Đăng nhập -->
                             <div class="header__top__right__auth">
                                 <a href="dangnhap"><i class="fa fa-user"></i> Đăng nhập</a>
+                                <a>/</a>
+                                <a href="dangky"><i class="fa fa-user"></i> Đăng ký</a>
                             </div>
                         </div>
                     </div>

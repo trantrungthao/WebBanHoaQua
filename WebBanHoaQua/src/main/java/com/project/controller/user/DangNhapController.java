@@ -13,12 +13,6 @@ public class DangNhapController {
 		ModelAndView mav = new ModelAndView("user/dangnhap");
 		return mav;
 	}
-	//Hien trang dang ky
-	@RequestMapping(value = "/dangky", method = RequestMethod.GET)
-	public ModelAndView register() {
-		ModelAndView mav = new ModelAndView("user/dangky");
-		return mav;
-	}
 	//
 	@RequestMapping(value = "/dangnhapSecurity", method = RequestMethod.GET)
 	public ModelAndView accessDenied() {
