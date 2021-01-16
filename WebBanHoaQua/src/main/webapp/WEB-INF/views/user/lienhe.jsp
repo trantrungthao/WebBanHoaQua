@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <c:url value="template/user" var="url"></c:url>
 <!DOCTYPE html>
-<html lang="zxx">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -38,20 +39,18 @@
                     </div>
                 </div>
             </div>
-            <form action="#">
+            <a style="color: red;">&emsp; ${thongbao}</a>
+            <form:form action="xulylienhe" method="post" modelAttribute="lienhe">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Họ và Tên">
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Email của bạn">
+                        <input type="text" id="email" name="email" placeholder="Email của bạn" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required >
                     </div>
                     <div class="col-lg-12 text-center">
-                        <textarea placeholder="Tin nhắn"></textarea>
+                        <textarea id="cmt" name="cmt" placeholder="Tin nhắn" required ></textarea>
                         <button type="submit" class="site-btn">Gửi</button>
                     </div>
                 </div>
-            </form>
+            </form:form>
         </div>
     </div>
     <!-- Contact Form End -->

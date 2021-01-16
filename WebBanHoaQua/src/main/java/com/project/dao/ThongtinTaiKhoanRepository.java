@@ -6,5 +6,6 @@ import com.project.model.ThongtinTaikhoan;
 
 public interface ThongtinTaiKhoanRepository extends JpaRepository<ThongtinTaikhoan, Long>{
 	ThongtinTaikhoan findOne(Long id);
+	ThongtinTaikhoan findOneByHoten(String hoten);
 	
 }

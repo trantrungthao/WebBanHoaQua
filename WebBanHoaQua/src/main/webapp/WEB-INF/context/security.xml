@@ -10,8 +10,8 @@
     <http auto-config="false" use-expressions="true" disable-url-rewriting="true">
     
     	<intercept-url pattern="/admin/*" access="hasAnyRole('ADMIN')" />
-    	<intercept-url pattern="/user/*" access="hasRole('USER')" />
-    	
+    	<intercept-url pattern="/thanhtoan" access="hasRole('USER')" />
+    <!-- 	<access-denied-handler error-page="/403"/> -->
     	<access-denied-handler error-page="/dangnhapSecurity" />
         <form-login  login-page="/dangnhap"
                      username-parameter="j_username"
@@ -33,6 +33,6 @@
     </authentication-manager>
     
     <beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
-    <beans:bean id="customUserDetailsService" class="com.project.services.impl.TaiKhoanSecurityImpl" />
+    <beans:bean id="customUserDetailsService" class="com.project.services.TaiKhoanSecurityService" />
     <beans:bean id="customSuccessHandler" class="com.project.security.CustomSecurityHandler" />
 </beans:beans>

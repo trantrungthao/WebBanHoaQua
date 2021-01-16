@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ include file="/common/taglib.jsp" %>
+<%@ include file="/common/taglib.jsp" %>
 <c:url value="template/user" var="url"></c:url>
-
-
     <!-- Header Section Begin -->
     <header class="header">
         <div class="header__top">
@@ -27,7 +25,6 @@
                             </div>
                             <!-- Ngôn ngữ -->
                             <div class="header__top__right__language">
-                                <img src="${url}/img/language.png" alt="">
                                 <div>English</div>
                                 <span class="arrow_carrot-down"></span>
                                 <ul>
@@ -37,10 +34,12 @@
                             </div>
                             <!-- Đăng nhập -->
                             <div class="header__top__right__auth">
-                                <a href="dangnhap"><i class="fa fa-user"></i> Đăng nhập</a>
-                                <a>/</a>
-                                <a href="dangky"><i class="fa fa-user"></i> Đăng ký</a>
+                                <a href="dangnhap" style="float: left">Đăng nhập/</a>
+                                <a href="dangky" style="float: left; padding-left: 2px">Đăng ký</a>
                             </div>
+                            <!-- Đăng xuất -->
+                            <a>Welcome: ${pageContext.request.userPrincipal.name}</a>
+                            <a href="dangxuat">Đăng xuất</a>
                         </div>
                     </div>
                 </div>
@@ -57,9 +56,9 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="trangchu">Trang Chủ</a></li>
-                            <li><a href="sanpham">Sản Phẩm</a></li>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="trangchu">Trang Chủ</a></li>
+                            <li><a href="danhsachsanpham">Sản Phẩm</a></li>
+                            <li><a href="#">Giới thiệu</a></li>
                             <li><a href="lienhe">Liên Hệ</a></li>
                         </ul>
                     </nav>
@@ -68,9 +67,9 @@
                     <div class="header__cart">
                         <ul>
                         <!-- Shopping Cart -->
-                            <li><a href="giohang"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="giohang"><i class="fa fa-shopping-bag"></i> <span>${count}</span></a></li>
                         </ul>
-                        <div class="header__cart__price">Tổng tiền: <span>15000VNĐ</span></div>
+                        <div class="header__cart__price">Tổng tiền: <span>${giohang.tongtien} VNĐ</span></div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-package com.project.services.impl;
+package com.project.services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ import com.project.model.TaiKhoan;
 import com.project.model.ThongtinTaikhoan;
 
 @Service
-public class TaiKhoanSecurityImpl implements UserDetailsService {
+public class TaiKhoanSecurityService implements UserDetailsService {
 
 	@Autowired
 	private TaiKhoanRepository tkRepository;

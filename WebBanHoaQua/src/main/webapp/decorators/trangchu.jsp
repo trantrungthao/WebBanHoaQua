@@ -3,7 +3,7 @@
 <%@ include file="/common/taglib.jsp" %>
 <c:url value="template/user" var="url"></c:url>
 <!DOCTYPE html>
-<html lang="zxx">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -27,17 +27,13 @@
 
 <body>
    <!-- header start -->
-		<div>
 			<jsp:include page="/common/user/header.jsp" />
-		</div>
 	<!-- header end -->
 
    <dec:body/>
    
     <!-- Footer Begin -->
-		<div>
 			<jsp:include page="/common/user/footer.jsp" />
-		</div>
     <!-- Footer End -->
 
     <!-- Js Plugins -->
@@ -49,7 +45,57 @@
     <script src="<c:url value='${url}/js/mixitup.min.js'/>"></script>
     <script src="<c:url value='${url}/js/owl.carousel.min.js'/>"></script>
     <script src="<c:url value='${url}/js/main.js'/>"></script>
-
+    <!-- Kiểm tra mật khẩu khi đang ký  -->
+    <script>
+		function kiemtraMatKhau() {
+			var matkhau = document.getElementById("matkhau").value;
+			var nhaplaimk = document.getElementById("nhaplaimk").value;
+			var ok = false;
+			 if (matkhau != nhaplaimk) {
+				document.getElementById("message").innerHTML = "Mật khẩu không trùng nhau";
+		
+			} else {
+				ok = true;
+			}
+			return ok;
+		}
+		function validateSubmit() {
+			return kiemtraMatKhau();
+		}
+	</script>
+	<!-- Kiểm tra tên đăng ký -->
+	<script>
+			function check() {
+			$("#tendangnhap").blur(function(){
+				var name=$("#tendangnhap").val();
+				console.log(name);
+				$.ajax({
+					url: "kiemtra/tendangnhap",
+					type: "post",
+					data:"tendangnhap="+name,
+					dataType: "text",
+					success:function(result){
+						if(result=='yes'){
+							$("#nameMsg").html("Tên đã tồn tại. Vui lòng chọn tên khác!");
+							$("#tendangnhap").focus();
+							$("#dangky").prop("disabled",true);
+						}else{
+							$("#nameMsg").html("");
+							$("#dangky").prop("disabled",false);
+						}
+					}
+				});
+			});
+			}
+	</script>
+	<!-- Tìm kiếm sản phẩm -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#productName').autocomplete({
+				source : 'timkiem'
+			});
+		});
+	</script>
 </body>
 
 </html>

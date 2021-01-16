@@ -10,8 +10,4 @@
 		<pattern>/admin*</pattern>
 	</decorator>
 
- 	<!--  <decorator name="dangnhap" page="dangnhap.jsp">
-		<pattern>/dangnhap</pattern>
-	</decorator> -->
-
 </decorators>

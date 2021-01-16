@@ -6,4 +6,5 @@ import com.project.model.TaiKhoan;
 
 public interface TaiKhoanRepository extends JpaRepository<TaiKhoan, Long> {
 	TaiKhoan findOneByTendangnhapAndActive(String tendangnhap, int active);
+	TaiKhoan findOneByTendangnhap(String tendangnhap);
 }

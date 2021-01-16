@@ -16,6 +16,6 @@ public class DangNhapController {
 	//
 	@RequestMapping(value = "/dangnhapSecurity", method = RequestMethod.GET)
 	public ModelAndView accessDenied() {
-		return new ModelAndView("redirect:/dangnhap?error");
+		return new ModelAndView("redirect:/dangnhap?error=403");
 	}
 }
